@@ -18,11 +18,16 @@ class ArticleController{
 
     }
 
+    public function updateForm(){
+        require 'Vue/updateArticle.php';
+    }
+
+
     public function update($id){
-        $article = new Article($id, $_POST['titre'], $_POST['contenu'], date('Y-m-d'));
         $articleManager = new ArticleManager();
+        $article = new Article($id, $_POST['titre'], $_POST['contenu'], date('Y-m-d'));
         $articleManager->update($article);
-        header('Location: http://localhost/exempleMVC/index.php?controller=article&action=selectAll');
+
     }
 }
 ?>

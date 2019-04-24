@@ -31,6 +31,8 @@ foreach ($articles as $article){
             <br />
             <em><a href="#">Commentaires</a></em>
             <em><a href="http://localhost/exempleMVC/index.php?controller=article&action=supprimer&id=<?php echo $article->getId()?>">Supprimer</a></em>
+            <em><a href="http://localhost/exempleMVC/index.php?controller=article&action=updateForm&id=<?php echo $article->getId()?>">Update</a></em>
+
         </p>
     </div>
     <?php
